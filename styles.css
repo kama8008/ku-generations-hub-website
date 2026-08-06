@@ -131,8 +131,9 @@ p {
 
 h1 {
   margin-bottom: 22px;
-  font-size: clamp(2.55rem, 5.6vw, 5.4rem);
+  font-size: clamp(2.1rem, 4.2vw, 4.4rem);
   line-height: 1;
+  white-space: nowrap;
 }
 
 h2 {
@@ -502,6 +503,10 @@ h2 {
 
   .meaning-grid {
     grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
   }
 
   .music-list {
