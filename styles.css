@@ -299,12 +299,10 @@ h2 {
 
 .video-item,
 .music-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
   gap: 14px;
   min-height: 92px;
-  padding: 18px;
+  padding: 12px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background:
@@ -312,10 +310,31 @@ h2 {
     rgba(255, 255, 255, 0.06);
 }
 
+.video-item {
+  grid-template-columns: 178px minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.music-item {
+  grid-template-columns: 1fr;
+  align-content: start;
+}
+
+.video-item img,
+.music-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(7, 9, 24, 0.55);
+}
+
 .video-item span,
 .music-item span {
   color: var(--gold);
   font-weight: 900;
+  line-height: 1.25;
 }
 
 .video-item strong,
@@ -486,6 +505,10 @@ h2 {
   }
 
   .music-list {
+    grid-template-columns: 1fr;
+  }
+
+  .video-item {
     grid-template-columns: 1fr;
   }
 }
