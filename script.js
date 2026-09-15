@@ -46,3 +46,26 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+const registrationForm = document.querySelector("#registration-form");
+registrationForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!registrationForm.reportValidity()) return;
+  const data = new FormData(registrationForm);
+  const body = [
+    "K&U Acting & Musical Program Registration",
+    "Term: September 2026 – May 2027",
+    "Both phases: $800",
+    "",
+    "Student name: " + data.get("student"),
+    "Student age: " + data.get("age"),
+    "Parent / guardian: " + data.get("guardian"),
+    "Email: " + data.get("email"),
+    "Phone: " + data.get("phone"),
+    "Notes: " + (data.get("notes") || ""),
+  ].join("\r\n");
+  const subject = "K&U Course Registration";
+  window.location.href = "mailto:kugenerationhub@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  document.querySelector("#registration-status").textContent =
+    "Please send the prepared email in your email app. If it does not open, email your details to kugenerationhub@gmail.com.";
+});

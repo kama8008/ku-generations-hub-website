@@ -216,80 +216,9 @@ h2 {
   gap: 12px;
 }
 
-.ticket-card {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
-  gap: 22px;
-  align-items: start;
-}
-
-.ticket-card .column-number,
-.ticket-card .eyebrow,
-.ticket-card h2 {
-  grid-column: 1 / -1;
-}
-
 .intro-card p,
 .video-note {
   margin-bottom: 0;
-}
-
-.poster {
-  width: 100%;
-  border: 1px solid rgba(247, 200, 95, 0.28);
-  border-radius: 20px;
-  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.36);
-}
-
-.ticket-info {
-  color: var(--ink);
-  background: #fff8e7;
-}
-
-.ticket-info.compact {
-  margin-top: 16px;
-  padding: 18px;
-  border-radius: 18px;
-}
-
-.ticket-info ul {
-  display: grid;
-  gap: 8px;
-  padding: 0;
-  margin: 0 0 18px;
-  list-style: none;
-}
-
-.ticket-info li {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(23, 18, 31, 0.12);
-}
-
-.ticket-info span,
-.ticket-info small {
-  display: block;
-  color: rgba(23, 18, 31, 0.62);
-  font-weight: 800;
-}
-
-.ticket-info strong {
-  display: block;
-  margin-top: 4px;
-  font-size: 1.14rem;
-  line-height: 1.2;
-}
-
-.buy-button {
-  display: inline-flex;
-  min-height: 52px;
-  align-items: center;
-  justify-content: center;
-  padding: 13px 22px;
-  color: var(--ink);
-  font-weight: 900;
-  border-radius: 999px;
-  background: var(--gold);
-  box-shadow: 0 14px 32px rgba(247, 200, 95, 0.36);
 }
 
 .video-list {
@@ -406,6 +335,35 @@ h2 {
 
 .performer-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.teacher-profile {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.teacher-profile .member-photo img {
+  aspect-ratio: 4 / 5;
+}
+
+.teacher-bio h4 {
+  margin: 0 0 14px;
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+.teacher-bio p {
+  margin: 0 0 16px;
+  color: var(--soft);
+}
+
+@media (max-width: 640px) {
+  .teacher-profile {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .member-photo {
@@ -604,10 +562,6 @@ h2 {
     margin-top: 28px;
   }
 
-  .ticket-card {
-    grid-template-columns: 1fr;
-  }
-
   .music-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -644,4 +598,65 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+}
+
+.semester-section { margin: 22px 0; }
+.semester-overview, .enrollment-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 28px;
+  align-items: start;
+}
+/* Show the poster artwork without its original white side margins. */
+.semester-poster-frame {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 822 / 950;
+  border-radius: 18px;
+}
+.semester-poster {
+  position: absolute;
+  top: 0;
+  left: -4.136253%;
+  width: 109.489051%;
+  max-width: none;
+  height: auto;
+}
+.semester-section h3 { color: var(--gold); margin-top: 22px; }
+.semester-section a:not(:has(img)) { text-decoration: underline; text-underline-offset: 3px; }
+.course-facts { margin: 0; }
+.course-facts div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.course-facts dt { color: var(--soft); }
+.course-facts dd { margin: 4px 0 0; font-weight: 800; }
+.course-includes { padding: 16px; background: var(--panel); border-radius: 12px; }
+.enrollment-grid { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.payment-qr { width: 100%; max-width: 380px; height: auto; background: white; }
+#registration-form { display: grid; gap: 10px; }
+#registration-form input, #registration-form textarea {
+  width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line);
+  border-radius: 8px; font: inherit; color: var(--ink); background: white;
+}
+#registration-form textarea { resize: vertical; }
+.registration-button {
+  padding: 14px 18px; border: 0; border-radius: 12px; background: var(--gold);
+  color: var(--ink); font: inherit; font-weight: 800; cursor: pointer; margin-top: 8px;
+}
+.registration-help { color: var(--soft); font-size: .9rem; margin: 0; }
+#registration-form a { overflow-wrap: anywhere; }
+#registration-form :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+@media (max-width: 760px) {
+  .semester-overview, .enrollment-grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* Keep Anna's portrait compact and preserve the full original photo. */
+.teacher-profile .member-photo {
+  width: 100%;
+  max-width: 220px;
+  justify-self: center;
+}
+.teacher-grid .teacher-profile .member-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
 }

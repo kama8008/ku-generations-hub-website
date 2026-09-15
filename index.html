@@ -15,8 +15,8 @@
       <span>K&U Generations Hub Ltd.</span>
     </a>
     <nav class="nav-menu" aria-label="Main navigation">
-      <a href="#intro">K&U Introduction</a>
-      <a href="#tickets">Tickets</a>
+      <a href="#introduction">K&U Introduction</a>
+      <a href="#courses">Program</a>
       <a href="#videos">Event Videos</a>
       <a href="#music">Music List</a>
       <a href="#members">Members</a>
@@ -49,8 +49,7 @@
           </div>
         </section>
 
-        <section class="columns-section" aria-label="Main website sections">
-          <article class="column-card intro-card">
+          <article class="column-card intro-card" id="introduction">
             <div class="column-number">01</div>
             <p class="eyebrow">K&U Introduction</p>
             <h2>K&U Introduction</h2>
@@ -65,25 +64,67 @@
             </p>
           </article>
 
-          <article class="column-card ticket-card" id="tickets">
-            <div class="column-number">02</div>
-            <p class="eyebrow">Tickets</p>
-            <h2>Ticket Poster</h2>
-            <img class="poster" src="assets/images/fairy-tales-ticket-poster.png" alt="Fairy Tales in My Heart ticket poster">
-            <div class="ticket-info compact">
-              <ul>
-                <li><span>Event</span><strong>Fairy Tales in My Heart</strong><small>A magical children's musical about courage, dreams, and keeping promises.</small></li>
-                <li><span>Performance Date</span><strong>August 10, 2026</strong></li>
-                <li><span>Show Time</span><strong>Doors Open 6:00 PM</strong><small>Ends 8:00 PM</small></li>
-                <li><span>Venue</span><strong>Scandinavian Centre</strong><small>739 20 Ave NW, Calgary, AB T2M 1E2</small></li>
-                <li><span>Admission</span><strong>Adult $15 / Children free</strong></li>
-              </ul>
-              <a class="buy-button" href="https://square.link/u/NRVAyaib?src=embed" target="_blank" rel="noopener">Buy Tickets</a>
+        <section class="semester-section column-card" id="courses" aria-labelledby="courses-title">
+          <p class="eyebrow">September 2026 – May 2027 · New Semester Program</p>
+          <h2 id="courses-title">Acting &amp; Musical Program</h2>
+          <p>Acting &amp; Musical Theatre · Teacher: <a href="#anna-lupeko-name">Anna Lupeko</a></p>
+          <div class="semester-overview">
+            <a class="semester-poster-frame" href="assets/images/new-semester-courses.jpg?v=20260915" target="_blank" rel="noopener" aria-label="View full course poster">
+              <img class="semester-poster" src="assets/images/new-semester-courses.jpg?v=20260915" alt="K&amp;U new semester acting and musical theatre course poster" loading="lazy">
+            </a>
+            <div>
+              <dl class="course-facts">
+                <div><dt>Ages</dt><dd>5–14 years</dd></div>
+                <div><dt>Class time</dt><dd>2:30 PM – 4:00 PM</dd></div>
+                <div><dt>Location</dt><dd>Beddington Theatre Arts Centre<br>375 Bermuda Dr NW, Calgary, AB T3K 2J5</dd></div>
+                <div><dt>Total tuition</dt><dd>$800</dd></div>
+              </dl>
+              <h3>Phase 1</h3>
+              <p><strong>September 25 – December 4, 2026</strong><br>Acting Foundations</p>
+              <ul><li>Acting foundations</li><li>Speech &amp; dialogue</li><li>Character building</li><li>Stage confidence &amp; teamwork</li></ul>
+              <h3>Phase 2</h3>
+              <p><strong>January – May 2027</strong><br>Musical Production on Stage</p>
+              <ul><li>Musical theatre rehearsals</li><li>Character building</li><li>Stage confidence &amp; teamwork</li><li>Final showcase on stage</li></ul>
+              <p class="course-includes">Includes: Final Showcase on Stage.</p>
             </div>
-          </article>
+          </div>
+          <div class="enrollment-grid">
+            <section class="course-payment" aria-labelledby="payment-title">
+              <h3 id="payment-title">Payment</h3>
+              <p>Two phases total: <strong>$800</strong></p>
+              <a href="https://square.link/u/Zp1Dnqax?src=sms" target="_blank" rel="noopener" aria-label="Pay program tuition on Square">
+                <img class="payment-qr" src="assets/images/course-payment-qr.png" alt="Course payment QR code" loading="lazy">
+              </a>
+              <p>Scan the QR code or click it to pay on Square.</p>
+            </section>
+            <section aria-labelledby="registration-title">
+              <h3 id="registration-title">Registration</h3>
+              <form id="registration-form">
+                <label for="student-name">Student name *</label>
+                <input id="student-name" name="student" maxlength="100" required autocomplete="name">
+                <label for="student-age">Student age (5–14 years) *</label>
+                <input id="student-age" name="age" type="number" min="5" max="14" required>
+                <label for="guardian-name">Parent / guardian *</label>
+                <input id="guardian-name" name="guardian" maxlength="100" required>
+                <label for="contact-email">Email *</label>
+                <input id="contact-email" name="email" type="email" maxlength="150" required autocomplete="email">
+                <label for="contact-phone">Phone *</label>
+                <input id="contact-phone" name="phone" type="tel" maxlength="40" required autocomplete="tel">
+                <label for="registration-notes">Questions / notes</label>
+                <textarea id="registration-notes" name="notes" rows="3" maxlength="1000"></textarea>
+                <button class="registration-button" type="submit">Send registration by email</button>
+                <p class="registration-help">This opens your email app with the form details. Please send the email there to complete your request.</p>
+                <p>Contact: <a href="mailto:kugenerationhub@gmail.com">kugenerationhub@gmail.com</a></p>
+                <p id="registration-status" role="status"></p>
+              </form>
+            </section>
+          </div>
+        </section>
+        <section class="columns-section" aria-label="Main website sections">
 
-          <article class="column-card videos-card" id="videos">
-            <div class="column-number">03</div>
+
+<article class="column-card videos-card" id="videos">
+            <div class="column-number">02</div>
             <p class="eyebrow">Event Videos</p>
             <h2>Event Videos</h2>
             <div class="video-list">
@@ -112,7 +153,7 @@
 
         <section class="music-section" id="music" aria-label="Our music list">
           <div class="column-card music-card">
-            <div class="column-number">04</div>
+            <div class="column-number">03</div>
             <p class="eyebrow">Our Music List</p>
             <h2>Our Music List</h2>
             <div class="music-list">
@@ -162,7 +203,7 @@
 
         <section class="members-section" id="members" aria-label="Organization members and young performers">
           <div class="column-card members-card">
-            <div class="column-number">05</div>
+            <div class="column-number">04</div>
             <p class="eyebrow">Organization Members</p>
             <h2>Core Team &amp; Teachers</h2>
             <p class="members-intro">
@@ -178,6 +219,21 @@
               <div class="member-group">
                 <h3>Teachers</h3>
                 <div class="member-grid teacher-grid">
+                  <article class="teacher-profile" aria-labelledby="anna-lupeko-name">
+                    <figure class="member-photo">
+                      <img src="assets/images/members/anna-lupeko.jpg" alt="Anna Lupeko, actress and theatre teacher" width="960" height="1200" loading="lazy">
+                      <figcaption>Anna Lupeko</figcaption>
+                    </figure>
+                    <div class="teacher-bio">
+                      <h4 id="anna-lupeko-name">Anna Lupeko</h4>
+                      <p>Anna is a professional actress with a comprehensive theatrical education that spans drama theatre, puppet theatre, musical theatre, and more. This diverse background makes her a highly versatile professional who can work effectively with students of any age.</p>
+                      <p>Anna is a founder and Artistic Director of Skylark Art School — a comprehensive art school for kids &amp; teens. She also co-founded and served as the Managing Director of the Ukrainian theatre STRUM, where she acted and produced 4 theatre projects.</p>
+                      <p>Anna has been teaching children and adults since 2019, bringing together over seven years of dedicated teaching practice.</p>
+                      <p>For her classes, Anna uses her own teaching methodology — a unique blend of techniques from the Kharkiv Theatre School, along with her personal acting and teaching experience.</p>
+                      <p>Anna also has a musical background in piano and vocal performance. She deeply believes in the extraordinary power of art — a power that reveals talent, shapes personality, and inspires growth.</p>
+                      <p><strong>Education:</strong> Master’s Degree in Performing Arts</p>
+                    </div>
+                  </article>
                   <figure class="member-photo">
                     <img src="assets/images/members/pin-zhao.png" alt="Pin Zhao vocal teacher">
                     <figcaption>Pin Zhao</figcaption>
@@ -190,11 +246,12 @@
                     <img src="assets/images/members/eric-zhao.png" alt="Eric Zhao dance teacher">
                     <figcaption>Eric Zhao</figcaption>
                   </figure>
+
                 </div>
               </div>
 
               <div class="member-group">
-                <h3>Young Performers</h3>
+                <h3>Cast of Our Most Recent Performance</h3>
                 <div class="member-grid performer-grid">
                   <figure class="member-photo">
                     <img src="assets/images/members/olivia.png" alt="Olivia young performer">
