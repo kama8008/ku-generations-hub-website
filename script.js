@@ -12,7 +12,7 @@ const lightbox = document.querySelector(".image-lightbox");
 const lightboxImage = lightbox?.querySelector("img");
 const lightboxClose = lightbox?.querySelector(".lightbox-close");
 const zoomableImages = document.querySelectorAll(
-  ".teacher-grid .member-photo img, .performer-grid .member-photo img"
+  ".teacher-grid .member-photo img, .performer-grid .member-photo img, .ad-slot img"
 );
 
 function closeLightbox() {
