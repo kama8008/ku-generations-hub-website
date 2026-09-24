@@ -608,20 +608,19 @@ h2 {
   gap: 28px;
   align-items: start;
 }
-/* Show the poster artwork without its original white side margins. */
+/* Give the updated poster the full program width without cropping. */
+.semester-overview { grid-template-columns: minmax(0, 1fr); }
 .semester-poster-frame {
   display: block;
-  position: relative;
+  width: 100%;
+  max-width: 822px;
+  justify-self: center;
   overflow: hidden;
-  aspect-ratio: 822 / 950;
   border-radius: 18px;
 }
 .semester-poster {
-  position: absolute;
-  top: 0;
-  left: -4.136253%;
-  width: 109.489051%;
-  max-width: none;
+  display: block;
+  width: 100%;
   height: auto;
 }
 .semester-section h3 { color: var(--gold); margin-top: 22px; }
