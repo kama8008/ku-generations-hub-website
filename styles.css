@@ -660,3 +660,14 @@ h2 {
   aspect-ratio: 4 / 5;
   object-fit: contain;
 }
+/* Keep all sponsor ads reachable while the desktop sidebar follows scrolling. */
+@media (min-width: 981px) {
+  .sponsor-sidebar {
+    align-self: start;
+    max-height: calc(100vh - 112px);
+    max-height: calc(100dvh - 112px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) transparent;
+  }
+}
